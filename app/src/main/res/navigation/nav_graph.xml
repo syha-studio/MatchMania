@@ -1,0 +1,39 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.matchmania.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_about"
+            app:destination="@id/AboutFragment" />
+        <action
+            android:id="@+id/action_home_to_highscore"
+            app:destination="@id/HighscoreFragment"/>
+        <action
+            android:id="@+id/action_home_to_setting"
+            app:destination="@id/SettingFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/HighscoreFragment"
+        android:name="com.example.matchmania.HighscoreFragment"
+        android:label="HighscoreFragment"
+        tools:layout="@layout/fragment_highscore"/>
+
+    <fragment
+        android:id="@+id/SettingFragment"
+        android:name="com.example.matchmania.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_setting"/>
+    <fragment
+        android:id="@+id/AboutFragment"
+        android:name="com.example.matchmania.AboutFragment"
+        android:label="AboutFragment">
+    </fragment>
+</navigation>
